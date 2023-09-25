@@ -49,10 +49,10 @@ public class ConnectionProvider {
         return preparedStatement;
     }
 
-    public Optional<ResultSet> getData(String sql){
-            if(openConnection()){
+    public Optional<ResultSet> getData(/*String sql,*/ PreparedStatement preparedStatement){
+//            if(openConnection()){
                 try {
-                    preparedStatement=DatabaseConnection.getConnection().prepareStatement(sql);
+//                    preparedStatement=DatabaseConnection.getConnection().prepareStatement(sql);
                     resultSet = preparedStatement.executeQuery();
                     closeConnection();
                 } catch (Exception e) {
@@ -60,7 +60,7 @@ public class ConnectionProvider {
                     closeConnection();
                     throw new RuntimeException(e);
                 }
-            }
+//            }
             return Optional.ofNullable(resultSet); //Optional.empty
     }
 

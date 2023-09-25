@@ -28,6 +28,15 @@ public class Futbolcu {
         this.formaNo = formaNo;
     }
 
+    public Futbolcu(Long id, String isim, String mevki, int formaNo, Long deger, Long takimId) {
+        this.isim = isim;
+        this.mevki = mevki;
+        this.formaNo = formaNo;
+        this.deger = deger;
+        this.takimId = takimId;
+        this.id = id;
+    }
+
     public Long getId() {
         return id;
     }
