@@ -6,12 +6,20 @@ public class Futbolcu {
     private String isim;
     private String mevki;
     private int formaNo;
+    private Long deger;
     private Long takimId;
 
     public Futbolcu(String isim, String mevki, int formaNo, Long takimId) {
         this.isim = isim;
         this.mevki = mevki;
         this.formaNo = formaNo;
+        this.takimId = takimId;
+    }
+    public Futbolcu(String isim, String mevki, int formaNo,Long deger, Long takimId) {
+        this.isim = isim;
+        this.mevki = mevki;
+        this.formaNo = formaNo;
+        this.deger = deger;
         this.takimId = takimId;
     }
     public Futbolcu(String isim, String mevki, int formaNo) {
@@ -60,6 +68,14 @@ public class Futbolcu {
         this.takimId = takimId;
     }
 
+    public Long getDeger() {
+        return deger;
+    }
+
+    public void setDeger(Long deger) {
+        this.deger = deger;
+    }
+
     @Override
     public String toString() {
         return "Futbolcu{" +
@@ -67,6 +83,7 @@ public class Futbolcu {
                 ", isim='" + isim + '\'' +
                 ", mevki='" + mevki + '\'' +
                 ", formaNo=" + formaNo +
+                ", deger=" + deger +
                 ", takimId=" + takimId +
                 '}';
     }

@@ -8,6 +8,13 @@ import java.util.List;
 
 public class FutbolcuRepository implements ICrud<Futbolcu>{
 
+    /*
+        1- Futbolcular icin bir save metodu yazalim.
+
+        2- Futbolcular icin bir update metodu yazalim. id'sine gore futbolcuyu guncelleyelim.
+
+     */
+
     private String sql="";
     private ConnectionProvider connectionProvider;
 
